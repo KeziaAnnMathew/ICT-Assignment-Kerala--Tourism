@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/log.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    <title></title>
+</head>
+<body>
+  <!-- modified navbar -->
+  <nav class="navbar navbar-expand-lg navbar-static-top">
+    <a href="index.html" ><img src="./images/logo1.jpg" alt="logo1"></a>  		
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+      <span ><i class="fa fa-bars" aria-hidden="true"></i></span>
+    </button>
+    <!-- Collection of nav links, forms, and other content for toggling -->
+    <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">		
+        <div class="navbar-nav ml-auto">			
+            <div class="sign">
+                <a href="Login.html" class="nav-item nav-link">Sign In</a>
+                <a href="Signup.html" class="nav-item nav-link current">Sign Up</a>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- modified navbar ends -->
+    <!-- form section -->
+    <div class="row sec">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-3 mymar">
+            <form action="./Login.html" onsubmit="return register()" id="form-main">
+                <div class="form-group">
+                    <input type="name" class="form-control" id="exampleName" placeholder="Name" required >
+                  </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                  <input class="form-control" id="phone" placeholder="Mobile" required>
+                </div>
+                <!-- <div class="form-group psw">
+                  <input type="password" onkeyup="strength()"class="form-control" id="password" placeholder="Password" title="Must include atleast A capital letter, a small letter , a number, a special charachter and should be more than 8 in length" required>
+                  <button type="button" class="show" click="showpsw">SHOW</button>
+                </div> -->
+                <div class="form-group inner-addon right-addon">
+                  <i class="fa fa-eye" onClick="showpsw(this)"></i>
+                  <input type="password" class="form-control" onkeyup="strength()" id="password" placeholder="Password" title="Must include atleast A capital letter, a small letter , a number, a special charachter and should be more than 8 in length" required/>
+                </div>
+                <div class="indicatr">
+                  <span class="vweak"></span>
+                  <span class="weak"></span>
+                  <span class="med"></span>
+                  <span class="str"></span>
+                </div>
+                <div class="ctnt"><p class="txt1"></p><p class=txt></p></div>
+                <div class="form-group inner-addon right-addon">
+                  <i class="fa fa-eye" onClick="showpswc(this)"></i>
+                  <input type="password" class="form-control"  id="confirmpassword" placeholder="Confirm Password" required/>
+                </div>
+                <br>
+                <div class="text-center"><button type="submit" class="btn btn-success butn">Sign Up</button></div>
+                <br>
+                <p class="user">Already have an account? <a href="Login.html">Login</a></p>
+              </form>
+        </div>
+        
+    </div>
+    <!-- form section ends -->
+    <script src="./javascript/script.js"></script>
+</body>
+</html>

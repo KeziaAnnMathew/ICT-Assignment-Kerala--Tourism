@@ -1,0 +1,163 @@
+/* for the full section */
+.sec{
+    width:100vw;
+    padding-left: 10%;
+}
+.body{
+    width:100vw;
+}
+/* login box */
+.lo{
+    height:15vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    /* padding-bottom: 1%; */
+}
+.mymar{
+    margin-top: 10%;
+    justify-content: center;
+    padding:15px;
+    border-radius: 3px;
+    border: 1px solid rgba(13, 49, 167, 0.507);
+    background-color:  #fff;
+     /* rgba(238, 192, 93, 0.459); */
+}
+form{
+    padding-top:20px;
+}
+.mymar:hover{
+    box-shadow: 0px 1px 5px;
+}
+.psw{
+    display: flex;
+    align-items: stretch;
+    /* position: relative; */
+}
+.psw button{
+    /* position: absolute; */
+    /* margin: 10px 0 0px 250px;  */
+    font-size: small;
+    outline: none;
+}
+.show{
+    background-color: white;
+    border:0px;
+    color:grey;
+}
+/* .txt{
+    text-align: center;
+} */
+.indicatr{
+    text-align: center;
+}
+form .indicatr{
+    height:10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 3px 0;
+    display: none;
+}
+form .indicatr span{
+    height:50%;
+    width: 100%;
+    background-color: lightgrey;
+    border-radius: 20px;
+    position: relative;
+}
+form .indicatr span:before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    /* background-color: red; */
+    border-radius: 20px;
+}
+form .indicatr span.active.vweak:before{
+    background-color:#FF4757;
+}
+form .indicatr span.active.weak:before{
+    background-color:orange;
+}
+form .indicatr span.active.med:before{
+    background-color: cadetblue;
+}
+form .indicatr span.active.str:before{
+    background-color:lime;
+}
+form .txt1{
+    font-size: 16px;
+    font-weight: 350px;
+    display: none;
+}
+form .txt{
+    font-size: 16px;
+    font-weight: 250px;
+    display: none;
+}
+form .txt.vweak{
+    color: #FF4757;
+}
+form .txt.weak{
+    color: orange;
+}
+form .txt.med{
+    color: cadetblue;
+}
+form .txt.str{
+    color: lime;
+}
+.box {
+    width: 500px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #191919;
+    text-align: center;
+    transition: 0.25s;
+    margin-top: 100px
+}
+/* contents of box */
+.user{
+    text-align: center;
+}
+.user a{
+    color:#DAAD86;
+}
+@media(max-width:700px){
+    .sec{
+        padding-left: 0 !important;
+        padding-top: 3em;
+    }
+}
+.ctnt{
+    display: flex;
+}
+
+
+
+.inner-addon { 
+    position: relative; 
+}
+
+/* style icon */
+.inner-addon .fa {
+  position: absolute;
+  padding: 10px;
+}
+
+/* align icon */
+.left-addon .fa  { left:  0px;}
+.right-addon .fa { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
+
+.fa{
+    cursor: pointer;
+}

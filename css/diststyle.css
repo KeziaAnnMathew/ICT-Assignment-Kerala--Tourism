@@ -1,0 +1,51 @@
+/* for the dhading */
+.descdist{
+  padding-left: 42%;
+  padding-top: 5%;
+    font-weight: 750;
+    font-size: 50px;
+    font-style: italic;
+    /* font-family: 'Lato', sans-serif; */
+    color: #fff;
+    /* text-align: center; */
+}
+/* all images */
+/* cards */
+.allcards{
+    display:flex;
+    flex-wrap: wrap;
+    align-content: center;
+    /* padding-left: 10%; */
+    padding: 0 8em 0 8em;
+    
+}
+/* card box */
+.box {
+    transition: box-shadow .3s;
+    width: 370px;
+    height: 250px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    background: #fff;
+    float: left;
+    
+  }
+  .box:hover {
+    box-shadow: 1px 7px 15px rgba(33,33,33,.2); 
+  }
+  @media(max-width:700px){
+    .allcards{
+      padding: 0 1px 0 2.5em !important;
+    }
+    .descdist{
+      display: flex;
+      justify-content: center;
+      padding: 60px 0 0 0;
+    }
+
+    .descdist p{
+      font-size: 25px;
+      
+      /* padding-right: 30em; */
+    } 
+  }
