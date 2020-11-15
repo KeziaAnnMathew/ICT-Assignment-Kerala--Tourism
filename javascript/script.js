@@ -121,10 +121,10 @@ function strength(){
 		indictr.style.display= "flex";
 		txt1.style.display = "block";
 		txt1.textContent= "Password Strength: ";
-		if(password.value.length<=2){
+		if(password.value.length<=3){
 			no=0
 		}
-		if(password.value.length >=3 && (password.value.match(regweak) || password.value.match(regwk) || password.value.match(regmed) || password.value.match(regstr))){
+		if(password.value.length >=4 && (password.value.match(regweak) || password.value.match(regwk) || password.value.match(regmed) || password.value.match(regstr))){
 				no=1;
 		}
 		if(password.value.length >=6 && ((password.value.match(regweak) && password.value.match(regmed)) || (password.value.match(regmed) && password.value.match(regstr)) || (password.value.match(regweak) && password.value.match(regstr)))){
@@ -142,7 +142,12 @@ function strength(){
 			txt.textContent= "Weak";
 			txt.classList.add("vweak");
 		}
+		else{
+			vweak.classList.remove("active");
+		}
 		if (no == 1){
+			
+			vweak.style.backgroundColor="orange";
 			weak.classList.add("active");
 			txt.style.display = "block";
 			txt.textContent= "Medium";
@@ -152,22 +157,29 @@ function strength(){
 			txt.classList.remove("weak");
 		}
 		if (no == 2){
-			weak.classList.add("active");
+			vweak.style.backgroundColor="cadetblue";
+			weak.style.backgroundColor="cadetblue";
+			// weak.classList.add("active");
 			med.classList.add("active");
 			txt.style.display = "block";
 			txt.textContent= "Fair";
 			txt.classList.add("med");
 		}else{
+			weak.style.backgroundColor="lightgray";
 			med.classList.remove("active");
 			txt.classList.remove("med");
 		}
 		if (no == 3){
-			weak.classList.add("active");
-			med.classList.add("active");
+			vweak.style.backgroundColor="lime";
+			weak.style.backgroundColor="lime";
+			med.style.backgroundColor="lime";
+			// weak.classList.add("active");
+			// med.classList.add("active");
 			str.classList.add("active");
 			txt.textContent= "Strong";
 			txt.classList.add("str");
 		}else{
+			med.style.backgroundColor="lightgray";
 			str.classList.remove("active");
 			txt.classList.remove("str");
 		}
